@@ -29,3 +29,16 @@ for link in links:
     except Exception as e:
         print("Encounter Error |  " + format(e))
 
+
+def progress_function(self,stream, chunk,file_handle, bytes_remaining):
+
+    size = stream.filesize
+    p = 0
+    while p <= 100:
+        progress = p
+        print(str(p)+'%')
+        p = percent(bytes_remaining, size)
+
+def percent(self, tem, total):
+    perc = (float(tem) / float(total)) * float(100)
+    return perc
