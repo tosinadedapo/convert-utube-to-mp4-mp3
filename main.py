@@ -30,7 +30,7 @@ for link in links:
         print("Encounter Error |  " + format(e))
 
 
-def progress_function(self,stream, chunk,file_handle, bytes_remaining):
+def progress_function(self, stream, chunk,file_handle, bytes_remaining):
 
     size = stream.filesize
     p = 0
